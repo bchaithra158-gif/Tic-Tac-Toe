@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe</title>
+  <!-- Link to the external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== Main Wrapper ===== -->
+  <div class="wrapper">
+
+    <!-- ===== Game Title ===== -->
+    <header class="game-header">
+      <h1 class="title">
+        <span class="title-x">X</span>
+        <span class="title-o"> O </span>
+        <span class="title-x">Tic Tac Toe</span>
+      </h1>
+      <p class="subtitle">Classic Two-Player Game</p>
+    </header>
+
+    <!-- ===== Score Board ===== -->
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score-card score-x">
+        <span class="score-label">Player X</span>
+        <span class="score-value" id="score-x">0</span>
+        <span class="score-tag">Wins</span>
+      </div>
+      <div class="score-card score-draw">
+        <span class="score-label">Draws</span>
+        <span class="score-value" id="score-draw">0</span>
+        <span class="score-tag">Ties</span>
+      </div>
+      <div class="score-card score-o">
+        <span class="score-label">Player O</span>
+        <span class="score-value" id="score-o">0</span>
+        <span class="score-tag">Wins</span>
+      </div>
+    </section>
+
+    <!-- ===== Status Message ===== -->
+    <div class="status-box" id="status-box" aria-live="polite">
+      <span id="status-message">Player X's Turn</span>
+    </div>
+
+    <!-- ===== Game Board ===== -->
+    <main class="board" id="board" aria-label="Game Board">
+      <!-- Nine cells generated here; JavaScript also works with these -->
+      <div class="cell" data-index="0" role="button" aria-label="Cell 1" tabindex="0"></div>
+      <div class="cell" data-index="1" role="button" aria-label="Cell 2" tabindex="0"></div>
+      <div class="cell" data-index="2" role="button" aria-label="Cell 3" tabindex="0"></div>
+      <div class="cell" data-index="3" role="button" aria-label="Cell 4" tabindex="0"></div>
+      <div class="cell" data-index="4" role="button" aria-label="Cell 5" tabindex="0"></div>
+      <div class="cell" data-index="5" role="button" aria-label="Cell 6" tabindex="0"></div>
+      <div class="cell" data-index="6" role="button" aria-label="Cell 7" tabindex="0"></div>
+      <div class="cell" data-index="7" role="button" aria-label="Cell 8" tabindex="0"></div>
+      <div class="cell" data-index="8" role="button" aria-label="Cell 9" tabindex="0"></div>
+    </main>
+
+    <!-- ===== Control Buttons ===== -->
+    <div class="controls">
+      <button class="btn btn-restart" id="restart-btn" aria-label="Restart Game">
+        🔄 Restart Game
+      </button>
+      <button class="btn btn-reset" id="reset-btn" aria-label="Reset Scores">
+        🗑️ Reset Scores
+      </button>
+    </div>
+
+    <!-- ===== Win Overlay Modal ===== -->
+    <div class="overlay" id="overlay" aria-modal="true" role="dialog" aria-hidden="true">
+      <div class="modal">
+        <div class="modal-emoji" id="modal-emoji">🏆</div>
+        <h2 class="modal-title" id="modal-title">Player X Wins!</h2>
+        <p class="modal-sub" id="modal-sub">Congratulations!</p>
+        <button class="btn btn-restart modal-btn" id="modal-restart-btn">
+          🔄 Play Again
+        </button>
+      </div>
+    </div>
+
+    <!-- ===== Project Reflection Section ===== -->
+    <section class="reflection" aria-label="Project Reflection">
+      <div class="reflection-inner">
+        <h2 class="reflection-title">📝 Project Reflection</h2>
+        <div class="reflection-grid">
+
+          <div class="reflection-card">
+            <div class="ref-icon">🛠️</div>
+            <h3>Approach</h3>
+            <p>I developed the game using HTML, CSS, and JavaScript, starting with the game board and then implementing
+              the game logic.</p>
+          </div>
+
+          <div class="reflection-card">
+            <div class="ref-icon">🧩</div>
+            <h3>Challenges</h3>
+            <p>Checking winning combinations, managing player turns, and detecting draws were challenging.</p>
+          </div>
+
+          <div class="reflection-card">
+            <div class="ref-icon">✅</div>
+            <h3>Easy Parts</h3>
+            <p>Designing the board, adding colors, and creating buttons were easy.</p>
+          </div>
+
+          <div class="reflection-card">
+            <div class="ref-icon">🚀</div>
+            <h3>Improvements</h3>
+            <p>I want to improve my coding skills, write cleaner code, and add more interactive features.</p>
+          </div>
+
+          <div class="reflection-card">
+            <div class="ref-icon">🎓</div>
+            <h3>Biggest Learning</h3>
+            <p>I learned about JavaScript functions, conditions, arrays, and event listeners.</p>
+          </div>
+
+          <div class="reflection-card">
+            <div class="ref-icon">🔮</div>
+            <h3>Future Changes</h3>
+            <p>I would plan the project better, test all winning combinations, and add extra features.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div><!-- end .wrapper -->
+
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+
+</html>
